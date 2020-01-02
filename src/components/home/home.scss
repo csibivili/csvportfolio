@@ -1,0 +1,36 @@
+@import "../../config";
+
+#home {
+  overflow: hidden;
+
+  h1 {
+    margin-top: 20vh;
+
+    &.lg-heading {
+      font-size: 6rem;
+    }
+  }
+
+  h2.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 0.5), 0.5);
+  }
+
+  .text-secondary {
+    color: $secondary-color;
+  }
+
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut;
+      }
+    }
+  }
+}
