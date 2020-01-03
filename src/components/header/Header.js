@@ -25,11 +25,11 @@ class Header extends Component {
           <div className="btn-line"></div>
         </div>
 
-        <nav className="menu">
-          <div className="menu-branding">
+        <nav className={"menu" + (this.state.open ? " show" : "")}>
+          <div className={"menu-branding" + (this.state.open ? " show" : "")}>
             <div className="portrait"></div>
           </div>
-          <ul className="menu-nav">
+          <ul className={"menu-nav" + (this.state.open ? " show" : "")}>
             <li className="nav-item">
               <a href="/" className="nav-link">
                 Home
