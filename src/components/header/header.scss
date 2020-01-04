@@ -17,7 +17,7 @@ header {
       width: 28px;
       height: 3px;
       margin: 0 0 5px 0;
-      background: #ffffff;
+      background: set-text-color($primary-color);
       @include easeOut;
     }
 
@@ -122,7 +122,7 @@ header {
       text-transform: uppercase;
       padding: 1rem 0;
       font-weight: 300;
-      color: #ffffff;
+      color: set-text-color($primary-color);
       text-decoration: none;
       @include easeOut;
 
