@@ -14,6 +14,10 @@ class Header extends Component {
     this.setState({ open: !this.state.open });
   };
 
+  closeMenu = () => {
+    this.setState({ open: false });
+  };
+
   render() {
     return (
       <header>
@@ -25,7 +29,7 @@ class Header extends Component {
           <div className="btn-line"></div>
           <div className="btn-line"></div>
         </div>
-        <Menu open={this.state.open} />
+        <Menu isOpen={this.state.open} close={this.closeMenu} />
       </header>
     );
   }
