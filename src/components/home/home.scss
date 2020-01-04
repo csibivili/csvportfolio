@@ -34,3 +34,22 @@
     }
   }
 }
+
+@include mediaMd {
+  #home {
+    h1 {
+      &.lg-heading {
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@include mediaSm {
+  #home {
+    h1 {
+      margin-top: 10vh;
+    }
+  }
+}

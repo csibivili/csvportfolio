@@ -39,3 +39,10 @@ main {
   padding: 4rem;
   height: 100%;
 }
+
+@include mediaMd {
+  main {
+    align-items: center;
+    text-align: center;
+  }
+}
