@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Menu from "./menu/Menu";
 import "./header.scss";
 
 class Header extends Component {
@@ -24,36 +25,7 @@ class Header extends Component {
           <div className="btn-line"></div>
           <div className="btn-line"></div>
         </div>
-
-        <nav className={"menu" + (this.state.open ? " show" : "")}>
-          <div className={"menu-branding" + (this.state.open ? " show" : "")}>
-            <div className="portrait"></div>
-          </div>
-          <ul className={"menu-nav" + (this.state.open ? " show" : "")}>
-            <li
-              className={"nav-item current" + (this.state.open ? " show" : "")}
-            >
-              <a href="/" className="nav-link">
-                Home
-              </a>
-            </li>
-            <li className={"nav-item" + (this.state.open ? " show" : "")}>
-              <a href="/" className="nav-link">
-                About Me
-              </a>
-            </li>
-            <li className={"nav-item" + (this.state.open ? " show" : "")}>
-              <a href="/" className="nav-link">
-                My Work
-              </a>
-            </li>
-            <li className={"nav-item" + (this.state.open ? " show" : "")}>
-              <a href="/" className="nav-link">
-                How To Reach Me
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <Menu open={this.state.open} />
       </header>
     );
   }
