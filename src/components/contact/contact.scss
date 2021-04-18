@@ -1,0 +1,40 @@
+@import '../../config';
+
+#contact {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+  .inner-container {
+    &.content {
+      align-items: center;
+      margin: auto 0;
+    }
+
+    &.back {
+      margin-top: 30px;
+
+      a {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .contact-item {
+    display: flex;
+    min-width: 200px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    .contact-icon {
+      margin-right: 10px;
+    }
+  }
+}

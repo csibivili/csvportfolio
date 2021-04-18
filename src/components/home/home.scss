@@ -7,11 +7,14 @@
   flex-direction: column;
   flex-grow: 1;
   justify-content: center;
+  scroll-behavior: smooth;
 
   .down-arrow {
     width: auto;
     margin-top: auto;
     padding-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
   }
 
   .inner-container:first-child {
@@ -28,7 +31,7 @@
     align-items: center;
   }
 
-  .inner-container.about-contact {
+  .inner-container#about-contact {
     min-height: 300px;
     flex-direction: row;
     max-width: unset;
@@ -39,7 +42,6 @@
     }
 
     a {
-      font-size: 2rem;
       width: 150px;
       height: 150px;
       display: flex;
@@ -49,6 +51,7 @@
       background-color: rgba($white, 0.1);
       @include easeOut;
       font-weight: 600;
+      text-transform: uppercase;
     }
 
     .left-container {

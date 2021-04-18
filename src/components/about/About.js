@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptopCode, faChalkboardTeacher, faCubes } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faChalkboardTeacher, faCubes, faArrowLeft, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import './about.scss';
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div id="about">
-      <div className="inner-container">
+      <div className="inner-container back">
+        <Link to="/">
+          <FontAwesomeIcon icon={faArrowLeft} className="fa-2x" />
+          Back to home
+        </Link>
+      </div>
+
+      <div className="inner-container content">
         <div className="role-card">
           <div className="role-card-icon">
             <FontAwesomeIcon icon={faLaptopCode} className="fa-6x" />
@@ -41,6 +53,10 @@ const About = () => {
             <a href="https://www.greenfoxacademy.com/">Green Fox Academy</a>.
           </p>
         </div>
+      </div>
+
+      <div className="inner-container go-to-contact">
+        <Link to="/contact">Contact</Link>
       </div>
     </div>
   );

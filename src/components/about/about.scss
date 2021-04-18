@@ -2,31 +2,80 @@
 
 #about {
   display: flex;
-  justify-content: center;
   flex-grow: 1;
   color: $secondary-color;
   background-color: $primary-color;
+  flex-direction: column;
+
+  @include mediaMd {
+    padding-bottom: 80px;
+  }
 
   .inner-container {
     flex-direction: row;
     align-items: center;
 
-    @include mediaMd {
-      flex-direction: column;
-      padding-top: 40px;
-      padding-bottom: 40px;
+    &.content {
+      margin-top: auto;
+
+      @include mediaSm {
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+
+    &.back {
+      margin-top: 30px;
+
+      a {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &.go-to-contact {
+      margin-bottom: auto;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 10px solid $white;
+        background-color: rgba($white, 0.1);
+        @include easeOut;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        &:hover {
+          border-radius: 50%;
+          border-color: $secondary-color;
+        }
+      }
     }
   }
 
   .role-card {
     display: flex;
     flex-direction: column;
-    padding: 20px;
     flex-basis: 100%;
     min-height: 350px;
 
-    @include mediaMd {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    @include mediaSm {
       min-height: unset;
+      margin: 20px 0;
     }
 
     h2 {

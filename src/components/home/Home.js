@@ -23,9 +23,11 @@ const Home = () => {
             <FontAwesomeIcon icon={faGithub} className="fa-2x" />
           </a>
         </div>
-        <FontAwesomeIcon icon={faArrowDown} className="fa-3x down-arrow" />
+        <a className="down-arrow" href="#about-contact">
+          <FontAwesomeIcon icon={faArrowDown} className="fa-3x" />
+        </a>
       </div>
-      <div className="inner-container about-contact">
+      <div id="about-contact" className="inner-container">
         <div className={`left-container ${!hovered ? 'hovered' : ''}`}>
           <Link onMouseOver={() => setHovered(0)} to="/about">
             About

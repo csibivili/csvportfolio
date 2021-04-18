@@ -24,10 +24,10 @@ const Menu = ({ isOpen, close }) => {
             My Work
           </a>
         </li> */}
-        <li className={'nav-item' + (isOpen ? ' show' : '')}>
-          <a href="/" className="nav-link">
+        <li className={'nav-item' + (isOpen ? ' show' : '')} onClick={close}>
+          <NavLink to="/contact" className="nav-link" activeClassName="current">
             Contact
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
