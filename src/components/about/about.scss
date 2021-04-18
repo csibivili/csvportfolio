@@ -1,0 +1,44 @@
+@import '../../config';
+
+#about {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  color: $secondary-color;
+  background-color: $primary-color;
+
+  .inner-container {
+    flex-direction: row;
+    align-items: center;
+
+    @include mediaMd {
+      flex-direction: column;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .role-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    flex-basis: 100%;
+    min-height: 350px;
+
+    @include mediaMd {
+      min-height: unset;
+    }
+
+    h2 {
+      margin: 20px 0;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@import "../../config";
+@import '../../config';
 
 #home {
   overflow: hidden;
@@ -8,19 +8,100 @@
   flex-grow: 1;
   justify-content: center;
 
+  .down-arrow {
+    width: auto;
+    margin-top: auto;
+    padding-bottom: 20px;
+  }
+
+  .inner-container:first-child {
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  .inner-container:last-child {
+    min-height: 100px;
+    color: $black;
+    justify-content: center;
+    max-width: unset;
+    background-color: rgba($secondary-color, 0.5);
+    align-items: center;
+  }
+
+  .inner-container.about-contact {
+    min-height: 300px;
+    flex-direction: row;
+    max-width: unset;
+    background-color: rgba($black, 0.3);
+
+    @include mediaSm {
+      flex-direction: column;
+    }
+
+    a {
+      font-size: 2rem;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 10px solid $primary-color;
+      background-color: rgba($white, 0.1);
+      @include easeOut;
+      font-weight: 600;
+    }
+
+    .left-container {
+      justify-content: flex-end;
+      padding-right: 100px;
+
+      @include mediaMd {
+        padding-right: 0;
+        justify-content: center;
+      }
+    }
+
+    .right-container {
+      padding-left: 100px;
+
+      @include mediaMd {
+        padding-left: 0;
+        justify-content: center;
+      }
+    }
+
+    .left-container,
+    .right-container {
+      display: flex;
+      align-items: center;
+      flex-basis: 100%;
+
+      @include mediaSm {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      &.hovered > a {
+        border-radius: 50%;
+        border: 10px solid $secondary-color;
+      }
+    }
+  }
+
   h1 {
+    margin-top: auto;
+
     &.lg-heading {
       font-size: 6rem;
     }
   }
 
   h2.sm-heading {
-    margin-bottom: 3rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($secondary-color, 0.5), 0.3);
     font-size: 2rem;
-    
-    @media screen and (min-width: 768px) { 
+
+    @include mediaSm {
       display: inline;
     }
   }
@@ -31,6 +112,12 @@
 
   .icons {
     margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+
+    @include mediaMd {
+      justify-content: center;
+    }
 
     a {
       padding: 0.4rem;
@@ -50,14 +137,6 @@
         line-height: 1;
         margin-bottom: 1rem;
       }
-    }
-  }
-}
-
-@include mediaSm {
-  #home {
-    h1 {
-      margin-top: 10vh;
     }
   }
 }
