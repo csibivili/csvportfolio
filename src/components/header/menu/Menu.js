@@ -19,11 +19,11 @@ const Menu = ({ isOpen, close }) => {
             About
           </NavLink>
         </li>
-        <li className={"nav-item" + (isOpen ? " show" : "")}>
+        {/* <li className={"nav-item" + (isOpen ? " show" : "")}>
           <a href="/" className="nav-link">
             My Work
           </a>
-        </li>
+        </li> */}
         <li className={"nav-item" + (isOpen ? " show" : "")}>
           <a href="/" className="nav-link">
             How To Reach Me

@@ -1,6 +1,8 @@
 @import "config";
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -14,7 +16,6 @@ body {
   height: 100%;
   line-height: 1.5;
   background: $primary-color;
-  @include background;
   color: set-text-color($primary-color);
 }
 
@@ -31,18 +32,30 @@ h3 {
 }
 
 a {
-  color: #ffffff;
+  color: $white;
   text-decoration: none;
-}
-
-main {
-  padding: 4rem;
-  height: 100%;
 }
 
 @include mediaMd {
   main {
     align-items: center;
     text-align: center;
+  }
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+}
+
+.inner-container {
+  z-index: 10;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 80px;
+  
+  @include mediaSm {
+    padding: 0 40px;
   }
 }
